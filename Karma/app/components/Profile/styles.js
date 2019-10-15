@@ -67,7 +67,7 @@ export default StyleSheet.create({
         alignSelf: 'center',
         color: 'white',
         paddingTop: 5,
-        fontSize: 18,
+        fontSize: 28,
     },
     profileID: {
         alignSelf: 'center',
