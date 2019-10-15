@@ -10,8 +10,8 @@ export default class Profile2 extends React.Component {
     constructor() {
         super()
         this.state = {
-          mobile: 'rahulrs@cet.ac.in',
-          password: '123456789abc',
+          mobile: '',
+          password: '',
 
         }
       }
@@ -20,22 +20,11 @@ export default class Profile2 extends React.Component {
         header: null  
       }
 
+
     //   Have to enable dynamic Profile
     
-  async storeKey(data){
-    try {
-        await AsyncStorage.setItem('id_token', data);
-      } catch (error) {
-        console.log('AsyncStorage error: ' + error.message);
-      }
-  }
     checkSignIn(){
         console.warn("TEST")
-        if(this.state.mobile === ''){
-              this.storeKey("responseData.token");
-              this.props.navigation.navigate('Main');
-              return;
-        }
         return fetch('http://10.0.2.2:3000/authentication/login/karma', {
             method: 'POST',
             headers: {
@@ -49,24 +38,16 @@ export default class Profile2 extends React.Component {
           })
           .then((response) => response.json())
           .then((responseData) => {
-              console.warn(responseData)
-              this.storeKey(responseData.token);
-              // const tk =await AsyncStorage.getItem('id_token');
-              // console.log(tk)
-              this.props.navigation.navigate('Main');
+            
+            console.warn(responseData)
         })
           .done();
     }
     render(){
         
         return(
-          <View style={styles.parent}>
-          <View style={{flex:0.5}}>
-          </View>
-          <View style={{flex: 0.5}}>
-            {/* <Image source={require('./assets/spaceLogo.png')} style={{maxWidth: "100%", maxHeight: "100%",}} resizeMode={'contain'}></Image> */}
-          </View>
-          <KeyboardAvoidingView>
+            <View style={styles.parent}>
+            <KeyboardAvoidingView>
             <ScrollView>
               <View style={{flex: 3, margin: 25}}>
                   <View style={styles.inputSection}>
@@ -103,15 +84,10 @@ export default class Profile2 extends React.Component {
           </KeyboardAvoidingView>
           <TouchableOpacity style={styles.bookingButtonUse}
               onPress={() => {this.checkSignIn()}}>
-                <Text style={{color: 'white', textAlign: 'center', paddingTop: 10}}>Login</Text>
+                <Text style={{color: 'blue', textAlign: 'center', paddingTop: 10}}>Login</Text>
           </TouchableOpacity>
-          <View style={{flex: 1,flexDirection: 'row', alignSelf: 'center', paddingTop: 15}}>
-            <Text>New User?</Text>
-            <TouchableOpacity onPress={() => {this.props.navigation.navigate('Register')}}>
-              <Text style={{color: 'blue'}}>  Sign Up</Text>
-            </TouchableOpacity>
-          </View>           
-        </View>
+          
+            </View>
         );
     }
 
