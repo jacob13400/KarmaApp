@@ -10,6 +10,7 @@ import Course from './app/components/Course';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Icon2 from 'react-native-vector-icons/MaterialIcons';
 import Icon3 from 'react-native-vector-icons/FontAwesome';
+import styles from './app/components/Profile/styles';
 
 
 const ProfileStack = createStackNavigator(
@@ -65,7 +66,12 @@ const TabNavigator = createBottomTabNavigator({
     screen: ProfileStack,
     navigationOptions:{
       header: null,  
-      tabBarLabel:'Profile',  
+      tabBarLabel:'Profile',
+      tabBarOptions : {
+        style: {
+          backgroundColor: '#000000',
+        }
+      },  
       tabBarIcon:({tintColor})=>(  
           <Icon name="ios-person" color={tintColor} size={25} />  
       )  
@@ -75,7 +81,11 @@ const TabNavigator = createBottomTabNavigator({
     screen: AttendanceStack,
     navigationOptions:{
       header: null,  
-      tabBarLabel:'Attendance',  
+      tabBarLabel:'Attendance', tabBarOptions : {
+        style: {
+          backgroundColor: '#000000',
+        }
+      }, 
       tabBarIcon:({tintColor})=>(  
           <Icon name="ios-person" color={tintColor} size={25} />  
       )  
@@ -85,11 +95,16 @@ const TabNavigator = createBottomTabNavigator({
     screen: CourseStack,
     navigationOptions:{
       header: null,  
+      tabBarOptions : {
+        style: {
+          backgroundColor: '#000000',
+        }
+      },
       tabBarLabel:'Attendance',  
       tabBarIcon:({tintColor})=>(  
           <Icon name="ios-person" color={tintColor} size={25} />  
-      )  
-    }  
+      ),  
+    }
   },
 })
 
@@ -173,13 +188,13 @@ TabNavigator.navigationOptions = ({ navigation }) => {
 
   // You can do whatever you like here to pick the title based on the route name
   const headerTitle = routeName;
-
+  
   return {
     headerTitle,
-    header: null,
-    
+    header: null,    
   };
 };
+
 
 // const UserAppNavigator = createStackNavigator({
 //   Tab: UserTabNavigator,

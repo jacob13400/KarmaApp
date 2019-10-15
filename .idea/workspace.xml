@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8a8d10a2-99aa-4807-9016-729f50b81bae" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Karma/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/Karma/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Karma/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Karma/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Karma/app/components/Home/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Karma/app/components/Home/styles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Karma/app/components/Login/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Karma/app/components/Login/assets/spaceLogo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Karma/app/components/Login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Karma/app/components/Login/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Karma/app/components/Login/styles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Karma/app/components/Register/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Karma/app/components/Register/assets/spaceLogo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Karma/app/components/Register/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Karma/app/components/Register/styles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Karma/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Karma/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Karma/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Karma/package.json" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="67" />
+    <option name="y" value="25" />
+    <option name="width" value="1068" />
+    <option name="height" value="562" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="android.project.structure.last.selected" value="SDK Location" />
+    <property name="android.project.structure.proportion" value="0.15" />
+    <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Karma/android" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8a8d10a2-99aa-4807-9016-729f50b81bae" name="Default Changelist" comment="" />
+      <created>1571115615687</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571115615687</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" visible="true" weight="0.3295082" />
+      <window_info id="Structure" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="Resources Explorer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Captures" order="0" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="TODO" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Palette&#9;" />
+    </layout>
+  </component>
+</project>
