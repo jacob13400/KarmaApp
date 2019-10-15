@@ -81,8 +81,10 @@ export default class Profile2 extends React.Component {
                   {key: '4', 'subject': 'STLD', 'startTime': '14:00', 'endTime': '15:00'},
                 ]}
                 horizontal={true}
-                renderItem={({item}) => <View style={styles.classesDescription}>
-                    <Text>{item.subject}</Text>
+                renderItem={({item}) => 
+                  <View style={styles.classesDescription}>
+                    <Text style={{color: '#F0F0F0', fontSize: 18, textAlign: 'center', marginTop: 15}}>{item.subject}</Text>
+                    <Text style={{color: '#FD6A02', fontSize: 16, textAlign: 'center', marginTop: 15}}>{item.startTime} - {item.endTime}</Text>
                   </View>
                 }/>
             </ScrollView>
@@ -91,7 +93,25 @@ export default class Profile2 extends React.Component {
             {/* Gap */}
           </View>
           <View style={styles.classes}>
-
+            <Text style={styles.today}>Assignments</Text> 
+            <ScrollView horizontal = {true} showsHorizontalScrollIndicator={false}>
+              <FlatList 
+                data={[
+                  {key: '0', 'subject': 'Calculus', 'dueDate': '31-10-19', 'title': 'Tutorial'},
+                  {key: '1', 'subject': 'EDC', 'dueDate': '01-11-19', 'title': 'Tutorial'},
+                  {key: '2', 'subject': 'DS', 'dueDate': '5-11-19', 'title': 'Algorithm'},
+                  {key: '3', 'subject': 'DCS', 'dueDate': '14-11-19', 'title': 'Tutorial'},
+                  {key: '4', 'subject': 'STLD', 'dueDate': '18-11-19', 'title': 'Conversions'},
+                ]}
+                horizontal={true}
+                renderItem={({item}) => 
+                  <View style={styles.classesDescription}>
+                    <Text style={{color: '#F0F0F0', fontSize: 18, textAlign: 'center', marginTop: 15}}>{item.subject}</Text>
+                    <Text style={{color: '#FD6A02', fontSize: 16, textAlign: 'center', marginTop: 15}}>{item.title}</Text>
+                    <Text style={{color: '#FD6A02', fontSize: 16, textAlign: 'center', marginTop: 0}}>{item.dueDate}</Text>
+                  </View>
+                }/>
+            </ScrollView>
           </View>
           <View style={{flex:0.3}}>
             {/* Gap */}

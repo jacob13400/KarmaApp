@@ -176,7 +176,8 @@ TabNavigator.navigationOptions = ({ navigation }) => {
 
   return {
     headerTitle,
-    header: null
+    header: null,
+    
   };
 };
 

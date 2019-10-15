@@ -24,17 +24,21 @@ export default StyleSheet.create({
         marginTop: '5%'
     },
     classes: {
-        flex: 1,
-        backgroundColor: '#404040'
+        flex: 1.3,
+        marginLeft: 15,
+        marginRight: 15,
+        borderRadius: 3
     },
     today: {
-        color: '#F0F0F0', 
-        marginLeft: 3, 
-        marginTop: 3
+        flex: 0.5,
+        color: '#F0F0F0',
+        fontSize: 18, 
+        marginLeft: 15, 
     },
     classesDescription: {
         flex: 1, 
-        backgroundColor: '#D0D0D0',
+        backgroundColor: '#303030',
+        elevation: 2,
         width: 160, 
         height: '75%', 
         marginLeft: 20, 
