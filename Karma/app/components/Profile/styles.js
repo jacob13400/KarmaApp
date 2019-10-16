@@ -38,7 +38,6 @@ export default StyleSheet.create({
     classesDescription: {
         flex: 1, 
         backgroundColor: '#303030',
-        elevation: 2,
         width: 160, 
         height: '75%', 
         marginLeft: 20, 

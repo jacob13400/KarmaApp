@@ -8,7 +8,7 @@ import Profile from './app/components/Profile';
 import Attendance from './app/components/Attendance';
 import Course from './app/components/Course';
 import Icon from 'react-native-vector-icons/Ionicons';
-import Icon2 from 'react-native-vector-icons/MaterialIcons';
+import Icon2 from 'react-native-vector-icons/AntDesign';
 import Icon3 from 'react-native-vector-icons/FontAwesome';
 import styles from './app/components/Profile/styles';
 
@@ -62,30 +62,33 @@ const TabNavigator = createBottomTabNavigator({
   //     )  
   //   }  
   // },
+  Attendance: {
+    screen: AttendanceStack,
+    navigationOptions:{
+      header: null,  
+      tabBarLabel:'Attendance', 
+      tabBarOptions : {
+        activeTintColor: '#F0F0F0',
+        style: {
+          backgroundColor: '#101010',
+        }
+      }, 
+      tabBarIcon:({tintColor})=>(  
+          <Icon2 name="solution1" color={tintColor} size={25} />  
+      )  
+    }  
+  },
   Profile: {
     screen: ProfileStack,
     navigationOptions:{
       header: null,  
       tabBarLabel:'Profile',
       tabBarOptions : {
+        activeTintColor: '#F0F0F0',
         style: {
-          backgroundColor: '#000000',
+          backgroundColor: '#101010',
         }
       },  
-      tabBarIcon:({tintColor})=>(  
-          <Icon name="ios-person" color={tintColor} size={25} />  
-      )  
-    }  
-  },
-  Attendance: {
-    screen: AttendanceStack,
-    navigationOptions:{
-      header: null,  
-      tabBarLabel:'Attendance', tabBarOptions : {
-        style: {
-          backgroundColor: '#000000',
-        }
-      }, 
       tabBarIcon:({tintColor})=>(  
           <Icon name="ios-person" color={tintColor} size={25} />  
       )  
@@ -96,16 +99,19 @@ const TabNavigator = createBottomTabNavigator({
     navigationOptions:{
       header: null,  
       tabBarOptions : {
+        activeTintColor: '#F0F0F0',
         style: {
-          backgroundColor: '#000000',
+          backgroundColor: '#101010',
         }
       },
-      tabBarLabel:'Attendance',  
+      tabBarLabel:'Course',  
       tabBarIcon:({tintColor})=>(  
-          <Icon name="ios-person" color={tintColor} size={25} />  
+          <Icon2 name="book" color={tintColor} size={25} />  
       ),  
     }
   },
+},{
+  initialRouteName: 'Profile'
 })
 
 const AppNavigator = createStackNavigator({
