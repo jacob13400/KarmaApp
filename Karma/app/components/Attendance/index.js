@@ -116,6 +116,7 @@ export default class Profile2 extends React.Component {
                 </View>
                 }
           />
+          <View style={{height: 10}}></View>
         </ScrollView>
         </View>
         );

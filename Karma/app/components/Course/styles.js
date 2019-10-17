@@ -8,7 +8,7 @@ export default StyleSheet.create({
     gauge: {
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: '-57.8%',
+        marginTop: '-63%',
         marginRight: '19.5%',
       },
     gaugeText: {
@@ -23,7 +23,6 @@ export default StyleSheet.create({
         marginLeft: '5%',
         marginRight: '5%', 
         marginTop: '5%',
-        marginBottom: '5%',
         alignSelf: 'center',
         borderRadius: 5,
         flexDirection: 'row',
