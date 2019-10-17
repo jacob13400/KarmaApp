@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native'
 export default StyleSheet.create({
     parent: {
         flex: 1,
+        backgroundColor: '#101010'
     },
     header: {
         flex: 1,
@@ -28,7 +29,7 @@ export default StyleSheet.create({
         height: 41, 
         borderRadius: 25, 
         marginTop: -10, 
-        backgroundColor: '#3333FF',
+        backgroundColor: '#FD6A02',
         elevation: 3
     },
     inputSection: {
