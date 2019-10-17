@@ -126,6 +126,8 @@ export default class Profile2 extends React.Component {
             </View> */}
 
             {/* This Semester selection shall be implemented later after data entry. */}
+
+            {/* The series 2 marks have to be looped through and stored in another array */}
             <FlatList
               data={this.state.markDetails}
               renderItem={({item}) => 
