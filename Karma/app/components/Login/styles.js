@@ -29,7 +29,7 @@ export default StyleSheet.create({
         height: 41, 
         borderRadius: 25, 
         marginTop: -10, 
-        backgroundColor: '#FD6A02',
+        backgroundColor: '#FF6347',
         elevation: 3
     },
     inputSection: {

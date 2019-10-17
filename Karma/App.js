@@ -71,6 +71,7 @@ const TabNavigator = createBottomTabNavigator({
         activeTintColor: '#F0F0F0',
         style: {
           backgroundColor: '#101010',
+          height: 55,
         }
       }, 
       tabBarIcon:({tintColor})=>(  
@@ -87,6 +88,7 @@ const TabNavigator = createBottomTabNavigator({
         activeTintColor: '#F0F0F0',
         style: {
           backgroundColor: '#101010',
+          height: 55,
         }
       },  
       tabBarIcon:({tintColor})=>(  
@@ -102,6 +104,7 @@ const TabNavigator = createBottomTabNavigator({
         activeTintColor: '#F0F0F0',
         style: {
           backgroundColor: '#101010',
+          height: 55,
         }
       },
       tabBarLabel:'Course',  

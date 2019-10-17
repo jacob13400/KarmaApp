@@ -70,7 +70,7 @@ export default class Profile2 extends React.Component {
             <ScrollView>
               <View style={{flex: 3, margin: 25}}>
                   <View style={styles.inputSection}>
-                    <Icon3 name="mobile-phone" color = "#FD6A02" size={30} style={{alignSelf: 'center'}}></Icon3>
+                    <Icon3 name="mobile-phone" color = "#FF6347" size={30} style={{alignSelf: 'center'}}></Icon3>
                     <View style={styles.inputField}>
                       <TextInput
                           value={this.state.mobile}
@@ -84,7 +84,7 @@ export default class Profile2 extends React.Component {
                     </View>
                   </View>
                   <View style={styles.inputSection}>
-                    <Icon name="md-lock" color = "#FD6A02" size={30}  style={{alignSelf: 'center', marginLeft: -5}}></Icon>
+                    <Icon name="md-lock" color = "#FF6347" size={30}  style={{alignSelf: 'center', marginLeft: -5}}></Icon>
                     <View style={styles.inputField}>
                       <TextInput
                           value={this.state.password}
@@ -108,7 +108,7 @@ export default class Profile2 extends React.Component {
           <View style={{flex: 1,flexDirection: 'row', alignSelf: 'center', paddingTop: 15}}>
             <Text style={{color: '#909090'}}>New User?</Text>
             <TouchableOpacity onPress={() => {this.props.navigation.navigate('Register')}}>
-              <Text style={{color: '#FD6A02'}}>  Sign Up</Text>
+              <Text style={{color: '#FF6347'}}>  Sign Up</Text>
             </TouchableOpacity>
           </View>           
         </View>

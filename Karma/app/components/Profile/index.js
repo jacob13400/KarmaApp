@@ -47,7 +47,8 @@ export default class Profile2 extends React.Component {
         this.setState({firstName: responseData.classes.first_name,
           middleName: responseData.classes.middle_name,
           lastName: responseData.classes.last_name,
-          gender: responseData.classes.gender})
+          gender: responseData.classes.gender,
+          id: responseData.classes.id,})
       })
       .done();
     }
@@ -63,8 +64,8 @@ export default class Profile2 extends React.Component {
         <View style={styles.parent}>
           <View style={{flex: 1}}>
             <Image style={styles.profileImage} source={require('../assets/index.jpeg')}/>
-            <Text style={styles.profileName}>{this.state.firstName}</Text>
-            <Text style={styles.profileID}>TVE18CS012</Text>
+            <Text style={styles.profileName}>{this.state.firstName} {this.state.lastName}</Text>
+            <Text style={styles.profileID}>TVE18CS0{this.state.id}</Text>
           </View>
           <View style={{flex:0.4}}>
             {/* Gap */}

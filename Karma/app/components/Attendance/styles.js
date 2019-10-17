@@ -24,6 +24,7 @@ export default StyleSheet.create({
         marginLeft: '5%',
         marginRight: '5%', 
         marginTop: '5%',
+        marginBottom: '5%',
         alignSelf: 'center',
         borderRadius: 5,
         flexDirection: 'row',

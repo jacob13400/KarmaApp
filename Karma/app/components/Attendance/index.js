@@ -78,6 +78,10 @@ export default class Profile2 extends React.Component {
     render(){
       return(
         <View style={styles.parent}> 
+          <ScrollView showsVerticalScrollIndicator= {false}>
+          <View style={{marginLeft: '5%', marginTop: '4%', marginRight: '5%'}}>
+            <Text style={{color: 'white', fontSize: 25, fontWeight: 'bold'}}>Attendance</Text>
+          </View>
           <FlatList
             data={this.state.attendanceDetails}
             renderItem={({item}) => 
@@ -112,7 +116,7 @@ export default class Profile2 extends React.Component {
                 </View>
                 }
           />
-
+        </ScrollView>
         </View>
         );
     }

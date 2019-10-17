@@ -3,137 +3,40 @@ import { StyleSheet } from 'react-native'
 export default StyleSheet.create({
     parent: {
         flex: 1,
+        backgroundColor: '#101010'
     },
-    backgroundImage: {
-        justifyContent: 'center',
+    gauge: {
         alignItems: 'center',
-        width: '100%', 
-        height: '100%',
-    },
-    profileImage: {
-        flex:2,
-        justifyContent: 'flex-start',
-        alignSelf: 'flex-start',
-        width: 75, 
-        height: 75,
-        borderRadius: 75/2,
-        paddingTop: 5,
-    },
-    amenitiesDescription: {
-        flex:.5,
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        paddingTop: 15,
-        backgroundColor:'white',
-    },
-    amenitiesImage: {
-
-        justifyContent: 'flex-start',
-        alignSelf: 'flex-start',
-        width: 28, 
-        height: 28,
-
-        paddingLeft: 10,
-      
-    },
-    profileName: {
         justifyContent: 'center',
-        alignSelf: 'center',
-        fontSize: 20,
-    },
-    profileDescriptionAmenitiesIcon: {
-		alignSelf: 'stretch',
-		justifyContent: 'center',
-        width: 20,
-        height: 19,
-    },
-    profileDescriptionCostIcon: {
-		alignSelf: 'stretch',
-		justifyContent: 'center',
-        width: 13,
-        height: 17,
-    },    
-    informationAmenities: {
-        flex: .5,
-        paddingLeft: 10,
-        paddingRight: 10,
-        flexDirection: 'row',
-        marginTop: 15,
-        backgroundColor: 'red'
-    },
-    hairline: {
-        backgroundColor: '#3831A1',
-        height: 2,
-        width: 350
+        marginTop: '-57.8%',
+        marginRight: '19.5%',
       },
-      linearGradient: {     
-        flex: 2,
-        borderRadius: 0,
-        width:'100%',
-        height: '100%',
-        opacity: 0.75,
-      },
-      buttonText: {
-        fontSize: 18,
-        fontFamily: 'Gill Sans',
-        textAlign: 'center',
-        margin: 10,
-        color: '#ffffff',
+    gaugeText: {
         backgroundColor: 'transparent',
+        color: 'white',
+        fontSize: 18,
       },
-
-      information: {
-        flex: 3.5,
-        paddingLeft: 10,
-        paddingRight: 10,
-        marginTop: 15,
-        justifyContent: 'flex-start',
+    classesDescription: {
+        flex: 1, 
+        backgroundColor: '#202020',
+        width:"90%", 
+        marginLeft: '5%',
+        marginRight: '5%', 
+        marginTop: '5%',
+        marginBottom: '5%',
+        alignSelf: 'center',
+        borderRadius: 5,
+        flexDirection: 'row',
     },
-
-    informationTime: {
-        paddingLeft: 10,
-        paddingRight: 10,
-        marginTop: 15,
-        flexDirection:'row',
-        alignSelf: 'stretch',
+    semester: {
+        backgroundColor: '#404040', 
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+        borderRadius: 5, 
+        width: '15%',
+        height: '85%'
     },
-
-    timeDescription: {
-        flex:1,
-        justifyContent: 'space-between',
-        paddingTop: 15,
-    },
-    contentsContainer: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'flex-start',
-        flexDirection: 'column'
-    },
-    box: {
-        
-      marginTop:10,
-      backgroundColor: 'white',
-      alignItems: 'center',
-      shadowColor: 'black',
-      shadowOpacity: .2,
-      shadowOffset: {
-        height:5,
-        width:-2
-      },
-      elevation:2,
-      paddingTop:10,
-      flexDirection: 'row',
-      alignSelf: 'center',
-      justifyContent:'space-around',
-      borderRadius: 25,
-      height: 50,
-      width: 150,
-    },
-    cafeImage:{
-		alignSelf: 'stretch',
-		justifyContent: 'center',
-        height: 50,
-        width: 50,
-    },
-
+    semesterItem: {
+        backgroundColor: 'grey'
+    }
 })
