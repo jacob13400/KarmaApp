@@ -36,7 +36,7 @@ export default class Profile2 extends React.Component {
               this.props.navigation.navigate('Main');
               return;
         }
-        return fetch('http://10.0.2.2:3000/authentication/login/karma', {
+        return fetch('http://api.cet.ac.in/authentication/login/karma', {
             method: 'POST',
             headers: {
               Accept: 'application/json',

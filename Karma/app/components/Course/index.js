@@ -29,7 +29,7 @@ export default class Profile2 extends React.Component {
         const token =await AsyncStorage.getItem('id_token');
         console.log(token)
         var decoded = jwt_decode(token);
-      let url = 'http://10.0.2.2:3000/private/student/student_attendance_data'
+      let url = 'http://api.cet.ac.in/private/student/student_attendance_data'
       url = url + '/' + decoded.userId;
       console.log(url)
       return fetch(url , {
@@ -50,7 +50,7 @@ export default class Profile2 extends React.Component {
         const token =await AsyncStorage.getItem('id_token');
         console.log(token)
         var decoded = jwt_decode(token);
-      let url = 'http://10.0.2.2:3000/public/academics/courses_offered/'
+      let url = 'http://api.cet.ac.in/public/academics/courses_offered/'
       // url = url + '/' + decoded.userId;
       console.log(url)
       return fetch(url , {
@@ -71,7 +71,7 @@ export default class Profile2 extends React.Component {
         const token =await AsyncStorage.getItem('id_token');
         console.log(token)
         var decoded = jwt_decode(token);
-      let url = 'http://10.0.2.2:3000/private/student/student_course_internal_assessment'
+      let url = 'http://api.cet.ac.in/private/student/student_course_internal_assessment'
       url = url + '/' + decoded.userId;
       console.log(url)
       return fetch(url , {
@@ -132,22 +132,16 @@ export default class Profile2 extends React.Component {
               data={this.state.markDetails}
               renderItem={({item}) => 
                 <View style={styles.classesDescription}>
-                  <View style={{flex: 3}}>
-                    <Text style={{color: 'white', width: '90%', fontSize: 19, textAlign: 'left', marginLeft: '5%', marginTop: 15}}>{this.state.courseDetails[item.course_id-1].name}</Text>
-                    <View style={{flexDirection: 'row', marginTop: '3%'}}>
-                      <View style={{flex: 1, justifyContent: 'flex-end',marginBottom: '15%', marginTop: 20, marginLeft: '2%'}}>
-                        <Text style={{color: '#909090', width: '100%', fontSize: 16, textAlign: 'left', marginLeft: '5%'}}>{item.type}: {item.marks_obtained}/{item.maximum_marks}</Text>
-                      </View>
-                      <View style={{flex: 1, justifyContent: 'flex-end', marginBottom: '10%', marginTop: 0, marginRight: '-27.5%'}}>
-                        <TouchableOpacity style={{backgroundColor: '#303030', width: '50%', height: '40%', alignSelf: 'flex-end', justifyContent: 'center', borderRadius: 5}}
-                          onPress = {() => Linking.openURL('https://google.co.in')}>
-                          <Text style={{color: 'white', textAlign: 'center'}}>Syllabus</Text>
-                        </TouchableOpacity>
-                      </View>
+                  <View style={{flex: 2.5}}>
+                    <View style={{flex: 1}}>
+                      <Text style={{color: 'white', width: '80%', fontSize: 18, textAlign: 'left', marginLeft: '5%', marginTop: 15}}>{this.state.courseDetails[item.course_id-1].name}</Text>
+                    </View>
+                    <View style={{flex: 1, justifyContent: 'flex-end', marginTop: '-30%'}}>
+                      <Text style={{color: '#909090', width: '100%', fontSize: 16, textAlign: 'left', marginLeft: '5%'}}>{item.type}: {item.marks_obtained}/{item.maximum_marks}</Text>
                     </View>
                   </View>
-                  {item.marks_obtained/item.maximum_marks*100 < 35? 
-                    <View style={{flex: 1, paddingTop: "5%", paddingBottom: "20%"}}>
+                  {item.marks_obtained/item.maximum_marks*100 < 35 ? 
+                    <View style={{flex: 1, paddingTop: "5%", paddingBottom: "15%", alignItems: 'center', justifyContent: 'space-around'}}>
                       <Pie
                         radius={35}
                         innerRadius={30}
@@ -157,8 +151,13 @@ export default class Profile2 extends React.Component {
                       <View style={styles.gauge}>
                         <Text style={styles.gaugeText}>{item.marks_obtained/item.maximum_marks*100}%</Text>
                       </View>
-                    </View>: 
-                    <View style={{flex: 1, paddingTop: "5%", paddingBottom: "20%"}}>
+                      <TouchableOpacity style={{backgroundColor: '#303030', width: '80%', height: '25%', marginRight: '5%', marginTop: '-10%', justifyContent: 'center', borderRadius: 5}}
+                        onPress = {() => Linking.openURL('https://google.co.in')}>
+                        <Text style={{color: 'white', textAlign: 'center', paddingBottom: '5%'}}>Syllabus</Text>
+                      </TouchableOpacity> 
+                    </View>
+                    : 
+                    <View style={{flex: 1, paddingTop: "5%", paddingBottom: '13%', alignItems: 'center', justifyContent: 'space-around'}}>
                       <Pie
                         radius={35}
                         innerRadius={30}
@@ -167,7 +166,11 @@ export default class Profile2 extends React.Component {
                         backgroundColor='#505050' />
                       <View style={styles.gauge}>
                         <Text style={styles.gaugeText}>{item.marks_obtained/item.maximum_marks*100}%</Text>
-                      </View>
+                      </View>                      
+                      <TouchableOpacity style={{backgroundColor: '#303030', width: '80%', height: '25%', marginRight: '5%', marginTop: '-10%', justifyContent: 'center', borderRadius: 5}}
+                        onPress = {() => Linking.openURL('https://google.co.in')}>
+                        <Text style={{color: 'white', textAlign: 'center', paddingBottom: '5%'}}>Syllabus</Text>
+                      </TouchableOpacity>   
                     </View>
                   }
                 </View>

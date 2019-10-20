@@ -31,7 +31,7 @@ export default class Profile2 extends React.Component {
       const token =await AsyncStorage.getItem('id_token');
       console.log(token)
       var decoded = jwt_decode(token);
-      return fetch('http://10.0.2.2:3000/private/people/people/details', {
+      return fetch('http://api.cet.ac.in/private/people/people/details', {
         method: 'POST',
         headers: {
           Accept: 'application/json',

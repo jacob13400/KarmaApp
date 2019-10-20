@@ -19,59 +19,56 @@ export default class Profile2 extends React.Component {
           courseDetails: [{'name': 'Sample'},{'name': 'Sample'},{'name': 'Sample'},{'name': 'Sample'},{'name': 'Sample'},{'name': 'Sample'},],
 
         }
-      }
-    
-      static navigationOptions={
+    }    
+    static navigationOptions={
         header: null  
-      }
-      async getAttendance(){
+    }
+    async getAttendance(){
         const token =await AsyncStorage.getItem('id_token');
         console.log(token)
         var decoded = jwt_decode(token);
-      let url = 'http://10.0.2.2:3000/private/student/student_attendance_data'
-      url = url + '/' + decoded.userId;
-      console.log(url)
-      return fetch(url , {
-          method: 'GET',
-          headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
-          },
-        })
-        .then((response) => response.json())
-        .then((responseData) => {
-          console.log(responseData.classes)
-          this.setState({attendanceDetails :responseData.classes})
-        })
-        .done();
-      }
-      async getCourses(){
+		let url = 'http://api.cet.ac.in/private/student/student_attendance_data'
+		url = url + '/' + decoded.userId;
+		console.log(url)
+		return fetch(url , {
+		  method: 'GET',
+		  headers: {
+		    Accept: 'application/json',
+		    'Content-Type': 'application/json',
+		  },
+		})
+		.then((response) => response.json())
+		.then((responseData) => {
+		  console.log(responseData.classes)
+		  this.setState({attendanceDetails :responseData.classes})
+		})
+		.done();
+    }
+    async getCourses(){
         const token =await AsyncStorage.getItem('id_token');
         console.log(token)
         var decoded = jwt_decode(token);
-      let url = 'http://10.0.2.2:3000/public/academics/courses_offered/'
-      // url = url + '/' + decoded.userId;
-      console.log(url)
-      return fetch(url , {
-          method: 'GET',
-          headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
-          },
-        })
-        .then((response) => response.json())
-        .then((responseData) => {
-          console.warn(responseData.classes)
-          this.setState({courseDetails :responseData.classes})
-        })
-        .done();
-      }
-  
-      componentWillMount(){   
+		let url = 'http://api.cet.ac.in/public/academics/courses_offered/'
+		// url = url + '/' + decoded.userId;
+		console.log(url)
+		return fetch(url , {
+		  method: 'GET',
+		  headers: {
+		    Accept: 'application/json',
+		    'Content-Type': 'application/json',
+		  },
+		})
+		.then((response) => response.json())
+		.then((responseData) => {
+		  console.warn(responseData.classes)
+		  this.setState({courseDetails :responseData.classes})
+		})
+		.done();
+    } 
+    componentWillMount(){   
         this.getAttendance();
         this.getCourses();
-      }
-  
+    }
 
     //   Have to enable dynamic Profile
     
@@ -79,7 +76,7 @@ export default class Profile2 extends React.Component {
       return(
         <View style={styles.parent}> 
           <ScrollView showsVerticalScrollIndicator= {false}>
-          <View style={{marginLeft: '5%', marginTop: '4%', marginRight: '5%'}}>
+          <View style={{marginLeft: '5%', marginTop: '4%', marginRight: '5%', marginBottom: '3%'}}>
             <Text style={{color: 'white', fontSize: 25, fontWeight: 'bold'}}>Attendance</Text>
           </View>
           <FlatList
@@ -87,8 +84,12 @@ export default class Profile2 extends React.Component {
             renderItem={({item}) => 
               <View style={styles.classesDescription}>
                 <View style={{flex: 3}}>
-                  <Text style={{color: 'white', width: '100%', fontSize: 18, textAlign: 'left', marginLeft: '5%', marginTop: 15}}>{this.state.courseDetails[item.course_id-1].name}</Text>
-                  <Text style={{color: '#909090', width: '100%', fontSize: 18, textAlign: 'left', marginLeft: '5%', marginTop: 15}}>Attendance: {item.value}/{item.max_value}</Text>
+                  <View style={{flex: 1}}>
+                    <Text style={{color: 'white', width: '75%', fontSize: 18, textAlign: 'left', marginLeft: '5%', marginTop: 15}}>{this.state.courseDetails[item.course_id-1].name}</Text>
+                  </View>
+                  <View style={{flex: 1}}> 
+                    <Text style={{color: '#909090', width: '100%', fontSize: 17, textAlign: 'left', marginLeft: '5%'}}>Attendance: {item.value}/{item.max_value}</Text>
+                  </View>
                 </View>
                 {item.value/item.max_value*100 < 75? 
                   <View style={{flex: 1, paddingTop: "5%", paddingBottom: "20%"}}>
@@ -112,8 +113,9 @@ export default class Profile2 extends React.Component {
                     <View style={styles.gauge}>
                       <Text style={styles.gaugeText}>{item.value/item.max_value*100}%</Text>
                     </View>
-                  </View>}
-                </View>
+                  </View>
+                }
+              </View>
                 }
           />
           <View style={{height: 10}}></View>
