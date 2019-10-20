@@ -6,20 +6,22 @@ export default StyleSheet.create({
         backgroundColor: '#101010'
     },
     gauge: {
+        position: 'absolute',
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: '-63%',
-        marginRight: '19.5%',
+        marginTop: '33%',
+        paddingLeft: '8%'
       },
     gaugeText: {
         backgroundColor: 'transparent',
         color: 'white',
-        fontSize: 18,
+        fontSize: 17,
       },
     classesDescription: {
         flex: 1, 
         backgroundColor: '#202020',
-        width:"90%", 
+        width: "90%", 
+        height: '10%',
         marginLeft: '5%',
         marginRight: '5%', 
         marginTop: '5%',

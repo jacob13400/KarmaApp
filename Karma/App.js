@@ -62,6 +62,23 @@ const TabNavigator = createBottomTabNavigator({
   //     )  
   //   }  
   // },
+  Course: {
+    screen: CourseStack,
+    navigationOptions:{
+      header: null,  
+      tabBarOptions : {
+        activeTintColor: '#F0F0F0',
+        style: {
+          backgroundColor: '#101010',
+          height: 55,
+        }
+      },
+      tabBarLabel:'Course',  
+      tabBarIcon:({tintColor})=>(  
+          <Icon2 name="book" color={tintColor} size={25} />  
+      ),  
+    }
+  },
   Attendance: {
     screen: AttendanceStack,
     navigationOptions:{
@@ -95,23 +112,6 @@ const TabNavigator = createBottomTabNavigator({
           <Icon name="ios-person" color={tintColor} size={25} />  
       )  
     }  
-  },
-  Course: {
-    screen: CourseStack,
-    navigationOptions:{
-      header: null,  
-      tabBarOptions : {
-        activeTintColor: '#F0F0F0',
-        style: {
-          backgroundColor: '#101010',
-          height: 55,
-        }
-      },
-      tabBarLabel:'Course',  
-      tabBarIcon:({tintColor})=>(  
-          <Icon2 name="book" color={tintColor} size={25} />  
-      ),  
-    }
   },
 },{
   initialRouteName: 'Profile'
